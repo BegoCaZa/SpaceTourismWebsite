@@ -1,13 +1,71 @@
 import { useState } from 'react';
 import { DESTINATIONS } from '../../constants/destinations';
+import {
+  StyledDestinationContainer,
+  StyledDestinationTitle,
+  StyledDestinationTitleNumber,
+  StyledImageContainer,
+  StyledPlanetImage,
+  StyledDestinationInfoContainer,
+  StyledDestinationNavMenu,
+  StyledNavTab,
+  StyledTitle,
+  StyledDescription,
+  StyledStatsContainer,
+  StyledStatItem,
+  StyledStatLabel,
+  StyledStatValue
+} from './destination.styles';
 
 const Destination = () => {
-  const [activeDestination, setActiveDestination] = useState(1); //que empiece con la luna
-  const currentDestination = DESTINATIONS[activeDestination];
+  const [activeDestination, setActiveDestination] = useState(
+    DESTINATIONS[0].id
+  ); //que empiece con la luna
+
+  const currentDestination = DESTINATIONS.find(
+    dest => dest.id === activeDestination
+  );
+
+  console.log('DESTINATIONS:', DESTINATIONS);
+  console.log('activeDestination:', activeDestination);
   return (
-    <>
-      <h2>DESTINATION:l</h2>
-    </>
+    <StyledDestinationContainer>
+      <StyledDestinationTitle>
+        <StyledDestinationTitleNumber>01</StyledDestinationTitleNumber>
+        <span>PICK YOUR DESTINATION</span>
+      </StyledDestinationTitle>
+
+      <StyledImageContainer>
+        <StyledPlanetImage src={currentDestination.image} />
+      </StyledImageContainer>
+
+      <StyledDestinationInfoContainer>
+        <StyledDestinationNavMenu>
+          {DESTINATIONS.map(destination => (
+            <StyledNavTab
+              key={destination.id}
+              $active={destination.id === activeDestination}
+              onClick={() => setActiveDestination(destination.id)}
+            >
+              {destination.name}
+            </StyledNavTab>
+          ))}
+        </StyledDestinationNavMenu>
+        <StyledTitle>{currentDestination.name}</StyledTitle>
+        <StyledDescription>{currentDestination.description}</StyledDescription>
+
+        <StyledStatsContainer>
+          <StyledStatItem>
+            <StyledStatLabel>AVG. DISTANCE</StyledStatLabel>
+            <StyledStatValue>{currentDestination.distance}</StyledStatValue>
+          </StyledStatItem>
+          <StyledStatItem>
+            <StyledStatLabel>EST. TRAVEL TIME</StyledStatLabel>
+            <StyledStatValue>{currentDestination.travelTime}</StyledStatValue>
+          </StyledStatItem>
+        </StyledStatsContainer>
+      </StyledDestinationInfoContainer>
+    </StyledDestinationContainer>
   );
 };
 export default Destination;

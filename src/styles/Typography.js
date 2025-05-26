@@ -10,7 +10,7 @@ export const TYPOGRAPHY = {
 };
 export const TYPOGRAPHY_FONTS = {
   Bellefair: 'Bellefair, serif',
-  Bellefair: 'Bellefair, sans-serif',
+  Bellefair_sansSerif: 'Bellefair, sans-serif',
   BarlowCondensed: 'Barlow Condensed, sans-serif'
 };
 export const TYPOGRAPHY_WEIGHTS = {

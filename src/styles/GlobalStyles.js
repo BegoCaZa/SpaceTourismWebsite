@@ -32,5 +32,8 @@ export const GlobalStyles = createGlobalStyle`
     font-family: "Barlow", sans-serif;
     background-color: #0B0D17;
     color: white;
+     background-image: url('/assets/images/home/background-home-mobile.jpg');
+  background-size: cover;
+  background-position: center;
     }
 `;

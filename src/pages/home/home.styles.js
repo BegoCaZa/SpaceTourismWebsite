@@ -8,3 +8,8 @@ export const StyledExploreLink = styled(NavLink)`
   background-color: ${COLORS.white};
   display: block;
 `;
+
+export const StyledHomeContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+`;

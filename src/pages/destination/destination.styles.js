@@ -62,7 +62,10 @@ export const StyledDestinationNavMenu = styled.div`
 `;
 
 export const StyledNavTab = styled.button`
+  appearance: none;
+  background: none;
   border: none;
+  color: ${COLORS.white};
   cursor: pointer;
   padding: 10px;
   border-bottom: ${({ $active }) => ($active ? '3px solid white' : 'none')};

@@ -29,6 +29,8 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: "Barlow", sans-serif;
+    background-color: #0B0D17;
+    color: white;
     }
 `;

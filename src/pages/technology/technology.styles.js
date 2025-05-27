@@ -34,10 +34,11 @@ export const StyledPageTitleNumber = styled.span`
 export const StyledImageContainer = styled.div`
   display: flex;
   width: 100%;
-  /* height: 260px; */
-  justify-content: center;
-  align-items: center;
+  height: 660px;
+  /* justify-content: center;
+  align-items: center; */
   margin-bottom: 50px;
+  overflow: hidden;
 `;
 export const StyledTechnologyImage = styled.img`
   width: 100%;

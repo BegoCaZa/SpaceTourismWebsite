@@ -4,6 +4,7 @@ import { COLORS } from '../../styles/Colors';
 import { TYPOGRAPHY } from '../../styles/Typography';
 import { TYPOGRAPHY_FONTS } from '../../styles/Typography';
 import { TYPOGRAPHY_WEIGHTS } from '../../styles/Typography';
+import { BACKGROUND_IMAGES } from '../../constants/bgImages';
 
 export const StyledDestinationContainer = styled.div`
   width: 100%;
@@ -11,8 +12,14 @@ export const StyledDestinationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 0 20px;
+
+  padding: 90px 20px;
+  background-image: url(${BACKGROUND_IMAGES.destination.mobile});
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  z-index: -1;
+  top: 0;
 `;
 export const StyledDestinationTitle = styled.div`
   display: flex;
@@ -52,7 +59,7 @@ export const StyledDestinationInfoContainer = styled.div`
   gap: 10px;
 `;
 
-export const StyledDestinationNavMenu = styled.div`
+export const StyledNavigationMenu = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -73,8 +80,8 @@ export const StyledNavTab = styled.button`
 
 export const StyledTitle = styled.h1`
   font-family: ${TYPOGRAPHY_FONTS.Bellefair_sansSerif};
-  font-size: ${TYPOGRAPHY.fontSizeTextPreset2};
-  font-weight: ${TYPOGRAPHY_WEIGHTS.fontWeightSemiBold};
+  font-size: ${TYPOGRAPHY.fontSizeTextPreset3};
+  font-weight: ${TYPOGRAPHY_WEIGHTS.fontWeightMedium};
   margin: 16px 0;
 `;
 export const StyledDescription = styled.p`

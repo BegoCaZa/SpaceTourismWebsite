@@ -1,4 +1,4 @@
-export const backgroundImages = {
+export const BACKGROUND_IMAGES = {
   home: {
     mobile: '/assets/images/home/background-home-mobile.jpg',
     tablet: '/assets/images/home/background-home-tablet.jpg',

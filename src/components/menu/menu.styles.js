@@ -5,6 +5,7 @@ import { TYPOGRAPHY } from '../../styles/Typography';
 import { TYPOGRAPHY_FONTS } from '../../styles/Typography';
 
 import { TYPOGRAPHY_WEIGHTS } from '../../styles/Typography';
+import { BACKGROUND_IMAGES } from '../../constants/bgImages';
 
 export const StyledMenuContainer = styled.div`
   display: flex;
@@ -16,21 +17,22 @@ export const StyledMenuContainer = styled.div`
   position: relative;
 `;
 
-export const StyledHamburguerMenuIcon = styled.img`
+export const StyledMenuIconContainer = styled.img`
   cursor: pointer;
   position: absolute;
   right: 0;
   top: -10px;
+  z-index: 2;
 `;
 
-export const StyledCloseIcon = styled.img`
-  position: absolute;
-  top: -10px;
-  right: 10px;
-  z-index: 2;
-  display: ${({ $menuOpen }) => ($menuOpen ? 'block' : 'none')};
-  cursor: pointer;
-`;
+// export const StyledCloseIcon = styled.img`
+//   position: absolute;
+//   top: -10px;
+//   right: 10px;
+//   z-index: 2;
+//   display: ${({ $menuOpen }) => ($menuOpen ? 'block' : 'none')};
+//   cursor: pointer;
+// `;
 
 export const StyledOptionsContainer = styled.ul`
   position: fixed;

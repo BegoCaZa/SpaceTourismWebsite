@@ -4,8 +4,7 @@ import { PAGES } from '../../constants/pages';
 import {
   StyledOptionsContainer,
   StyledMenuContainer,
-  StyledHamburguerMenuIcon,
-  StyledCloseIcon,
+  StyledMenuIconContainer,
   StyledPageItem,
   StyledPageNumber,
   StyledPageTitle
@@ -14,19 +13,17 @@ const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   console.log(menuOpen);
+  const menuIcon = menuOpen
+    ? '/assets/images/shared/icon-close.svg'
+    : '/assets/images/shared/icon-hamburger.svg';
 
   return (
     <StyledMenuContainer>
-      <StyledHamburguerMenuIcon
-        src='/assets/images/shared/icon-hamburger.svg'
+      <StyledMenuIconContainer
+        src={menuIcon}
         onClick={() => setMenuOpen(!menuOpen)}
       />
       <nav>
-        <StyledCloseIcon
-          src='/assets/images/shared/icon-close.svg'
-          $menuOpen={menuOpen}
-          onClick={() => setMenuOpen(false)}
-        />
         <StyledOptionsContainer $menuOpen={menuOpen}>
           {PAGES.map(page => (
             <StyledPageItem

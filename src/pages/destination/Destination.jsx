@@ -7,7 +7,7 @@ import {
   StyledImageContainer,
   StyledPlanetImage,
   StyledDestinationInfoContainer,
-  StyledDestinationNavMenu,
+  StyledNavigationMenu,
   StyledNavTab,
   StyledTitle,
   StyledDescription,
@@ -40,7 +40,7 @@ const Destination = () => {
       </StyledImageContainer>
 
       <StyledDestinationInfoContainer>
-        <StyledDestinationNavMenu>
+        <StyledNavigationMenu>
           {DESTINATIONS.map(destination => (
             <StyledNavTab
               key={destination.id}
@@ -50,7 +50,7 @@ const Destination = () => {
               {destination.name}
             </StyledNavTab>
           ))}
-        </StyledDestinationNavMenu>
+        </StyledNavigationMenu>
         <StyledTitle>{currentDestination.name}</StyledTitle>
         <StyledDescription>{currentDestination.description}</StyledDescription>
 

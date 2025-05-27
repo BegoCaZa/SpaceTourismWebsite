@@ -4,7 +4,6 @@ import { COLORS } from '../../styles/Colors';
 import { TYPOGRAPHY } from '../../styles/Typography';
 import { TYPOGRAPHY_FONTS } from '../../styles/Typography';
 import { TYPOGRAPHY_WEIGHTS } from '../../styles/Typography';
-import { BACKGROUND_IMAGES } from '../../constants/bgImages';
 
 export const StyledDestinationContainer = styled.div`
   width: 100%;
@@ -12,14 +11,7 @@ export const StyledDestinationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  padding: 90px 20px;
-  background-image: url(${BACKGROUND_IMAGES.destination.mobile});
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  z-index: -1;
-  top: 0;
+  padding: 20px 20px;
 `;
 export const StyledDestinationTitle = styled.div`
   display: flex;
@@ -65,7 +57,7 @@ export const StyledNavigationMenu = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  margin-top: 20px;
+  margin: 40px 0 20px 0;
   width: 100%;
 `;
 
@@ -73,12 +65,13 @@ export const StyledNavTab = styled.button`
   appearance: none;
   background: none;
   border: none;
-  color: ${COLORS.white};
+  color: ${({ $active }) => ($active ? COLORS.white : COLORS.blue300)};
   font-family: ${TYPOGRAPHY_FONTS.BarlowCondensed};
   font-size: ${TYPOGRAPHY.fontSizeTextPreset8};
   cursor: pointer;
   padding: 10px;
   border-bottom: ${({ $active }) => ($active ? '3px solid white' : 'none')};
+  letter-spacing: 2px;
 `;
 
 export const StyledTitle = styled.h1`
@@ -94,7 +87,7 @@ export const StyledDescription = styled.p`
   text-align: center;
   margin: 0;
   line-height: 1.5;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 `;
 
 export const StyledStatsContainer = styled.div`
@@ -103,8 +96,8 @@ export const StyledStatsContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 30px 10px 20px 10px;
-  gap: 10px;
+  padding: 40px 10px 30px 10px;
+  gap: 20px;
   border-top: 1px solid ${COLORS.white};
 `;
 
@@ -112,7 +105,7 @@ export const StyledStatItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 `;
 export const StyledStatLabel = styled.span`
   font-family: ${TYPOGRAPHY_FONTS.BarlowCondensed};

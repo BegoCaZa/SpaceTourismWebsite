@@ -5,9 +5,9 @@ import { BACKGROUND_IMAGES } from '../../constants/bgImages';
 
 const Layout = () => {
   const location = useLocation();
-  console.log(location);
-  const pathname = location.pathname.slice(1);
-  const images = BACKGROUND_IMAGES[checkPathname(pathname)];
+
+  const images = getBackgroundImage(location);
+
   return (
     <StyledGeneralContainer $images={images}>
       <Header />
@@ -18,9 +18,11 @@ const Layout = () => {
 
 // necesito hacer una funcion que si es / crea home
 
-const checkPathname = pathname => {
-  if ((pathname = '/')) {
-    return 'home';
+const getBackgroundImage = location => {
+  const pathname = location.pathname.slice(1);
+  if (pathname === '') {
+    return BACKGROUND_IMAGES.home;
   }
+  return BACKGROUND_IMAGES[pathname];
 };
 export default Layout;

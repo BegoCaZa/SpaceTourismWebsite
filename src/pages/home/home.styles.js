@@ -53,4 +53,5 @@ export const StyledExploreLink = styled(NavLink)`
   font-family: ${TYPOGRAPHY_FONTS.Bellefair_sansSerif};
   font-size: ${TYPOGRAPHY.fontSizeTextPreset9};
   font-weight: ${TYPOGRAPHY_WEIGHTS.fontWeightMedium};
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 `;

@@ -16,8 +16,6 @@ const Layout = () => {
   );
 };
 
-// necesito hacer una funcion que si es / crea home
-
 const getBackgroundImage = location => {
   const pathname = location.pathname.slice(1);
   if (pathname === '') {

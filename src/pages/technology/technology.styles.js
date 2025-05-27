@@ -11,7 +11,6 @@ export const StyledPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
 `;
 
 export const StyledPageHeaderTitle = styled.div`
@@ -24,6 +23,7 @@ export const StyledPageHeaderTitle = styled.div`
   font-weight: 300;
   letter-spacing: 2px;
   margin-bottom: 64px;
+  margin-top: 20px;
 `;
 
 export const StyledPageTitleNumber = styled.span`
@@ -34,8 +34,10 @@ export const StyledPageTitleNumber = styled.span`
 export const StyledImageContainer = styled.div`
   display: flex;
   width: 100%;
+  /* height: 260px; */
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 `;
 export const StyledTechnologyImage = styled.img`
   width: 100%;
@@ -56,17 +58,23 @@ export const StyledNavidationMenu = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  width: 100px;
+  width: 150px;
   height: 12px;
+  margin-bottom: 50px;
 `;
 export const StyledNavTab = styled.button`
   appearance: none;
   background: none;
-  border: none;
-  width: 10px;
-  height: 10px;
+  border: ${COLORS.white} 1px solid;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: ${({ $active }) => ($active ? COLORS.white : 'grey')};
+  background-color: ${({ $active }) =>
+    $active ? COLORS.white : 'transparent'};
+  color: ${({ $active }) => ($active ? COLORS.blue900 : COLORS.white)};
+  font-size: ${TYPOGRAPHY.fontSizeTextPreset8};
+  font-family: ${TYPOGRAPHY_FONTS.Bellefair};
+  font-weight: ${TYPOGRAPHY_WEIGHTS.fontWeightLight};
 
   cursor: pointer;
 `;

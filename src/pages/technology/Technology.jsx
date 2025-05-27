@@ -38,7 +38,9 @@ const Technology = () => {
               key={tech.id}
               $active={tech.id === activeTechnology}
               onClick={() => setActiveTechnology(tech.id)}
-            ></StyledNavTab>
+            >
+              {tech.id}
+            </StyledNavTab>
           ))}
         </StyledNavidationMenu>
         <StyledTechnologyHeader>THE TERMINOLOGY…</StyledTechnologyHeader>

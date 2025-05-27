@@ -6,7 +6,8 @@ export const TYPOGRAPHY = {
   fontSizeTextPreset5: '28px',
   fontSizeTextPreset6: '24px',
   fontSizeTextPreset7: '22px',
-  fontSizeTextPreset8: '16px'
+  fontSizeTextPreset8: '16px',
+  fontSizeTextPreset9: '18px'
 };
 export const TYPOGRAPHY_FONTS = {
   Bellefair: 'Bellefair, serif',

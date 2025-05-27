@@ -63,9 +63,10 @@ export const StyledNavigationMenu = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
   margin-top: 20px;
+  width: 100%;
 `;
 
 export const StyledNavTab = styled.button`
@@ -73,6 +74,8 @@ export const StyledNavTab = styled.button`
   background: none;
   border: none;
   color: ${COLORS.white};
+  font-family: ${TYPOGRAPHY_FONTS.BarlowCondensed};
+  font-size: ${TYPOGRAPHY.fontSizeTextPreset8};
   cursor: pointer;
   padding: 10px;
   border-bottom: ${({ $active }) => ($active ? '3px solid white' : 'none')};
@@ -86,10 +89,12 @@ export const StyledTitle = styled.h1`
 `;
 export const StyledDescription = styled.p`
   font-family: ${TYPOGRAPHY_FONTS.BarlowCondensed};
-  font-size: ${TYPOGRAPHY.fontSizeTextPreset8};
+  font-size: ${TYPOGRAPHY.fontSizeTextPreset9};
   color: ${COLORS.blue300};
   text-align: center;
   margin: 0;
+  line-height: 1.5;
+  margin-bottom: 10px;
 `;
 
 export const StyledStatsContainer = styled.div`
@@ -98,7 +103,7 @@ export const StyledStatsContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 30px 10px 20px 10px;
   gap: 10px;
   border-top: 1px solid ${COLORS.white};
 `;
@@ -107,16 +112,17 @@ export const StyledStatItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 8px;
 `;
 export const StyledStatLabel = styled.span`
   font-family: ${TYPOGRAPHY_FONTS.BarlowCondensed};
   font-size: ${TYPOGRAPHY.fontSizeTextPreset8};
   color: ${COLORS.blue300};
+  letter-spacing: 2px;
 `;
 export const StyledStatValue = styled.span`
   font-family: ${TYPOGRAPHY_FONTS.Bellefair};
-  font-size: ${TYPOGRAPHY.fontSizeTextPreset6};
+  font-size: ${TYPOGRAPHY.fontSizeTextPreset5};
   color: ${COLORS.white};
-  font-weight: ${TYPOGRAPHY_WEIGHTS.fontWeightSemiBold};
+  font-weight: ${TYPOGRAPHY_WEIGHTS.fontWeightRegular};
 `;

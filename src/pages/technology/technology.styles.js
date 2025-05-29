@@ -13,6 +13,18 @@ export const StyledPageContainer = styled.div`
   align-items: center;
 `;
 
+export const StyledImageContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 460px;
+  /* justify-content: center;
+  align-items: center; */
+  margin-bottom: 50px;
+  /* overflow: hidden; */
+`;
+export const StyledTechnologyImage = styled.img`
+  width: 100%;
+`;
 export const StyledPageHeaderTitle = styled.div`
   display: flex;
   flex-direction: row;
@@ -29,19 +41,6 @@ export const StyledPageHeaderTitle = styled.div`
 export const StyledPageTitleNumber = styled.span`
   font-weight: ${TYPOGRAPHY_WEIGHTS.fontWeightBold};
   font-size: ${TYPOGRAPHY.fontSizeTextPreset8};
-`;
-
-export const StyledImageContainer = styled.div`
-  display: flex;
-  width: 100%;
-  height: 660px;
-  /* justify-content: center;
-  align-items: center; */
-  margin-bottom: 50px;
-  overflow: hidden;
-`;
-export const StyledTechnologyImage = styled.img`
-  width: 100%;
 `;
 
 export const StyledTechnologyInfoContainer = styled.div`
